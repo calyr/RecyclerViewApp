@@ -1,7 +1,9 @@
 package app.bo.com.ucb.recyclerviewapp
 
+import android.view.View
+
 interface ILoginView {
-    fun sendData(userName: String, password: String )
+    fun sendData(view: View)
     fun showMessage(message: String)
     fun gotoHome()
 

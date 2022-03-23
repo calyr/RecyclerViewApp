@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">RecyclerViewApp</string>
-    <string name="login_error_session">Error</string>
+    <string name="login_error_session">invalid credentials</string>
 </resources>
