@@ -9,7 +9,7 @@ class LiveDataString : ViewModel() {
     val cadena: LiveData<String>
         get() = _cadena
 
-    val _cadena = MutableLiveData<String>()
+    private val _cadena = MutableLiveData<String>()
 
     fun cambiar() {
         _cadena.value = (counter++).toString()

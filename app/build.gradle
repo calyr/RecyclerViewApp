@@ -57,6 +57,7 @@ dependencies {
 
     // Jetpack Compose Integration for ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha03"
+    implementation "androidx.activity:activity-ktx:1.2.2"
 
     // Annotation processor
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
