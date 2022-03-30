@@ -2,18 +2,31 @@ package app.bo.com.ucb.recyclerviewapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.Observer
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var loginViewModel: LoginViewModel
+    lateinit var userName: EditText
+    lateinit var userPassword: EditText
+    lateinit var btnLogin : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        userName = findViewById(R.id.user_name_login)
+        userPassword = findViewById(R.id.user_password_login)
+        btnLogin = findViewById(R.id.btn_login)
         loginViewModel = LoginViewModel(LoginRepository())
 
         loginViewModel.model.observe(this, Observer(::updateUi))
+
+        btnLogin.setOnClickListener {
+            loginViewModel.login(userName.text.toString(), userPassword.text.toString())
+        }
 
     }
 
