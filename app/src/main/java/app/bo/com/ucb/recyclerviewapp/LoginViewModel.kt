@@ -1,5 +1,6 @@
 package app.bo.com.ucb.recyclerviewapp
 
+import android.os.Handler
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,6 +20,11 @@ class LoginViewModel(val loginRepository: LoginRepository) : ViewModel() {
 
     fun login(userName: String, password: String) {
         _model.value = UiModel.Loading()
-        _model.value = UiModel.Login( loginRepository.login(userName, password))
+        val runnable = Runnable {
+            _model.value = UiModel.Login( loginRepository.login(userName, password))
+        }
+
+        Handler().postDelayed(runnable, 3000)
+
     }
 }

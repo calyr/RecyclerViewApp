@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecyclerViewApp">
         <activity
-            android:name=".LoginActivity"
+            android:name=".LiveDataActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -19,7 +19,7 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LiveDataActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
